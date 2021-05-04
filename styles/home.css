@@ -85,3 +85,11 @@ strong {
 .hidden {
     display: none;
 }
+
+li {
+    display: inline;
+}
+
+footer {
+    word-spacing: .2rem;
+}
