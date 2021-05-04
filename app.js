@@ -55,8 +55,8 @@ button.addEventListener ('click', () => {
         score++;
     }
 
-    const scorePercentage = parseInt(score / 3);
-    headerHeight.style.setProperty('--header-height', '200px')
-    resultDisplay.textContent = `${userFirstName} ${userLastName}, thanks for playing! You got ${score} of 3 questions right. Your scored ${scorePercentage}%`;
+    const scorePercentage = parseInt((score / 3) * 100);
+    headerHeight.style.setProperty('--header-height', '200px');
+    resultDisplay.textContent = `${userFirstName} ${userLastName}, thanks for playing! You got ${score} questions right. Your scored ${scorePercentage}%`;
 
 });
