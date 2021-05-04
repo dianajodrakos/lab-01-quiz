@@ -1,14 +1,29 @@
 
 body {
     --color1: rgba(255, 255, 255, 1);
-    --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
+    --shadow: 0px 10px 10px -12px rgba(0,0,0,0.45);
     --gutter: 50px;
     --header-height: 160px;
     --footer-height: 50px;
     height: 100%;
     width: 100%;
+    min-width: 500px;
     font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
+    font-size: 1.5vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    min-height: var(--header-height);
+    background-color: var(--color1);
+    box-shadow: var(--shadow);
 }
 
 main {
@@ -18,7 +33,7 @@ main {
     justify-content: center;
     align-items: center;
     padding: var(--gutter);
-    padding-top: calc(var(--header-height) + 50px);
+    padding-top: calc(var(--header-height) + 60px);
 }
 
 section {
@@ -27,15 +42,6 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-header {
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    height: var(--header-height);
-    background-color: var(--color1);
-    box-shadow: var(--shadow);
 }
 
 h2 {
@@ -48,7 +54,10 @@ footer {
     height: var(--footer-height);
     display: flex;
     justify-content: center;
-    background-color: var(--color1);
-    box-shadow: var(--shadow);
-    padding: var(--gutter);
+    align-items: center;
+    background-color: #eee;
+    border-top: .5px solid #ccc;
+    padding: calc(var(--gutter) / 2);
+    font-size: 1rem;
+    ;
 }

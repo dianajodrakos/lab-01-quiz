@@ -15,7 +15,7 @@ button.addEventListener ('click', () => {
     //confirm if user is ready to start the quiz
     const quizStartConfirm = confirm('Are you ready?');
     if (quizStartConfirm === false) { 
-        alert('Study harder and come back when you\'re ready!');
+        alert('Keep studying and come back when you\'re ready!');
         return;
     }
 
@@ -57,6 +57,17 @@ button.addEventListener ('click', () => {
 
     const scorePercentage = parseInt((score / 3) * 100);
     headerHeight.style.setProperty('--header-height', '200px');
-    resultDisplay.textContent = `${userFirstName} ${userLastName}, thanks for playing! You got ${score} questions right. Your scored ${scorePercentage}%`;
+    resultDisplay.classList.toggle('hidden');
+    if (score > 3) {
+        resultDisplay.textContent = ` ${userFirstName} ${userLastName}, amazing work! You really know your space stuff! You scored ${scorePercentage}%! `;
+        resultDisplay.style.backgroundColor = 'aquamarine';
+    } else if (score > 2) {
+        resultDisplay.textContent = ` Great Job, ${userFirstName} ${userLastName}! You answered ${score} questions right. You scored ${scorePercentage}% `;
+    } else if (score > 0) {
+        resultDisplay.textContent = ` ${userFirstName} ${userLastName}, thanks for playing! You answered ${score} questions right. You scored ${scorePercentage}% `;
+    } else if (score === 0) {
+        resultDisplay.textContent = ` Hey ${userFirstName} ${userLastName}, you answered every question wrong. Did you even try? How shameful. Study harder next time. `;
+        resultDisplay.style.backgroundColor = 'lightsalmon';
+    }
 
 });
