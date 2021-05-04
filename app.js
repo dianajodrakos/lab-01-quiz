@@ -3,6 +3,7 @@ import { countAsAYes, countAsANo, countSpacewalk } from './utils.js';
 // import functions and grab DOM elements
 const button = document.getElementById('button');
 const resultDisplay = document.getElementById('result');
+const headerHeight = document.querySelector('body');
 
 // initialize state
 
@@ -23,7 +24,7 @@ button.addEventListener ('click', () => {
     const userLastName = prompt('What\'s your last name?');
 
     //ask question 1
-    const answerOne = prompt('Did Mae Jemison fly on the Endeavor?');    
+    const answerOne = prompt(`Ok ${userFirstName}, did Mae Jemison fly on the Endeavor?`);    
     //initialize state
     let score = 0;
     //evaluate answer
@@ -39,21 +40,23 @@ button.addEventListener ('click', () => {
         score++;
     }
 
-
-    //ask question 3
-    const answerThree = prompt('Which woman shares the record for the longest single spacewalk');
-     //evaluate answer
-    if (countSpacewalk(answerThree)) {
-        score++;
-    }
     
-    resultDisplay.textContent = `${userFirstName} ${userLastName}, thanks for playing! You got ${score} of 3 questions right.`;
-
-
-    //ask question 4
-    const answerFour = prompt('Stephanie Wilson has flown to space three times.');    
+    //ask question 3
+    const answerThree = prompt('Has Stephanie Wilson flown to space three times?');    
     //evaluate answer
-    if (countAsAYes(answerFour)) {
+    if (countAsAYes(answerThree)) {
+        score++;
+    } 
+
+    //ask bonus question
+    const answerFour = prompt('Bonus Points: What is the name of the woman who shares the record for the longest single spacewalk?');
+     //evaluate answer
+    if (countSpacewalk(answerFour)) {
         score++;
     }
+
+    const scorePercentage = parseInt(score / 3);
+    headerHeight.style.setProperty('--header-height', '200px')
+    resultDisplay.textContent = `${userFirstName} ${userLastName}, thanks for playing! You got ${score} of 3 questions right. Your scored ${scorePercentage}%`;
+
 });
