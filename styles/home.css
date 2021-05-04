@@ -1,1 +1,35 @@
 /* add home page styles here */
+main {
+    background-color: var(--color1);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+footer {
+    background-color: var(--color1);
+}
+
+button {
+    padding: 5px;
+    margin: 1.5rem 0 0 0;
+}
+.card {
+    padding: 5px;
+    font-size: .8rem;
+    line-height: 1.1rem;
+    text-align: justify;
+    width: 300px;
+    margin: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    padding-bottom: 10px;
+
+}
+
+#result {
+    
+}
