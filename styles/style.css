@@ -1,9 +1,9 @@
 
 body {
     --color1: rgba(255, 255, 255, 1);
-    --shadow: 0px 10px 10px -12px rgba(0,0,0,0.45);
+    --shadow: 15px 5px 15px -12px rgba(0,0,0,0.45);
     --gutter: 50px;
-    --header-height: 160px;
+    --header-height: 200px;
     --footer-height: 50px;
     height: 100%;
     width: 100%;
@@ -14,26 +14,25 @@ body {
 }
 
 header {
+    font-size: 18px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
+    justify-content:space-around;
     text-align: center;
-    padding: 20px;
+    padding: 1rem 3rem;
     position: fixed;
     width: 100%;
     min-height: var(--header-height);
     background-color: var(--color1);
     box-shadow: var(--shadow);
+    border-top: .5px solid #ccc;
 }
 
 main {
     background-color: var(--color1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: var(--gutter);
     padding-top: calc(var(--header-height) + 60px);
+    align-self: center;
 }
 
 section {
@@ -59,5 +58,4 @@ footer {
     border-top: .5px solid #ccc;
     padding: calc(var(--gutter) / 2);
     font-size: 1rem;
-    ;
 }

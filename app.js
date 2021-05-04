@@ -4,10 +4,10 @@ import { countAsAYes, countAsANo, countSpacewalk } from './utils.js';
 const button = document.getElementById('button');
 const resultDisplay = document.getElementById('result');
 const headerHeight = document.querySelector('body');
-
 // initialize state
 
 // set event listeners to update state and DOM
+
 button.addEventListener ('click', () => {
     //alert user the quiz is going to start
     alert('Let\'s test your new knowledge.');
@@ -55,9 +55,16 @@ button.addEventListener ('click', () => {
         score++;
     }
 
+    //alert user the quiz is finished
+    alert(`Alright, ${userFirstName}, you're done. You can check out your results in the web page.`);
+
+    //define var for percentage and calc total
     const scorePercentage = parseInt((score / 3) * 100);
+
+    //do some style manipulation
     headerHeight.style.setProperty('--header-height', '200px');
-    resultDisplay.classList.toggle('hidden');
+    resultDisplay.classList.remove('hidden');
+
     if (score > 3) {
         resultDisplay.textContent = ` ${userFirstName} ${userLastName}, amazing work! You really know your space stuff! You scored ${scorePercentage}%! `;
         resultDisplay.style.backgroundColor = 'aquamarine';

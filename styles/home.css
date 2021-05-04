@@ -3,42 +3,56 @@ main {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
+    justify-content: center;
     background: ghostwhite;
 }
 
+/* header p {
+    padding: inherit 1rem;
+} */
+
 button {
-    padding: 4px 15px;
-    margin: 1.5rem 0;
-    background: eee;
-    box-shadow: .1rem .1rem .1rem #aaa;
+    padding: .5rem 2rem;
+    /* margin: 1.5rem 0; */
+    background: #eee;
+    box-shadow: .2rem .2rem .1rem aliceblue;
     border: .5px solid #ccc;
-    border-radius: 20px;
-    font-size: 1rem;
+    border-radius: 2rem;
+    font-size: .9rem;
+}
+
+button:hover {
+    box-shadow: .5rem .5rem .5rem aliceblue;
+    transform: translate(.05rem, .05rem);
+}
+
+button:active {
+    background: aquamarine;
 }
 .card {
     display: flex;
     flex-direction: column;
     background-color: gainsboro;
     border: 0;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
     padding: 1rem;
     width: 300px;
-    margin: 1rem;
-    box-shadow: .2rem .2rem .2rem #aaa;
-}
+    margin: .5rem;
+    box-shadow: .4rem .4rem .3rem aliceblue;
+    break-inside: avoid;}
 
 img {
     display: block;
     max-width: 100%;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: .2rem;
     overflow: hidden;
     border-top: .5px solid #bbb;
     border-left: .5px solid #bbb;
     border-right: .5px solid #bbb;
-
 }
 
 .card p {
@@ -48,10 +62,11 @@ img {
     border-right: .5px solid #bbb;
     border-bottom: .5px solid #bbb;
     align-self: flex-end;
-    text-align: justify;
     font-size: .8rem;
     line-height: 1.1rem;
     text-indent: 1rem;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
 }
 
 strong {
@@ -61,15 +76,12 @@ strong {
 
 #result {
     background: #eee;
-    border-radius: 20px;
+    border-radius: 2rem;
     border: .5px solid #ccc;
-    padding: 3px 15px;
+    padding: .4rem 2rem;
+    margin: .4rem 0;
 }
 
 .hidden {
     display: none;
-}
-
-.greyed-out {
-    opacity: .3;
 }
