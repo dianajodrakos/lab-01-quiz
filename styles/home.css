@@ -7,9 +7,19 @@ main {
     background: ghostwhite;
 }
 
-/* header p {
-    padding: inherit 1rem;
-} */
+a {
+    color: blue;
+}
+
+a:active {
+    color: aquamarine;
+
+}
+
+a:visited {
+    color: cornflowerblue;
+}
+
 
 button {
     padding: .5rem 2rem;
